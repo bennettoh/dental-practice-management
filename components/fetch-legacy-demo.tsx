@@ -2,7 +2,6 @@
 
 import { useState } from "react";
 import { Button } from "./ui/button";
-import { BASE_URL } from "@/lib/config";
 
 export const FetchLegacyDemo = () => {
   const [response, setResponse] = useState(null);
@@ -11,7 +10,7 @@ export const FetchLegacyDemo = () => {
 
   const handleClick = async () => {
     setIsLoading(true);
-    const res = await fetch(`${BASE_URL}/api/mock-external-api/slots`);
+    const res = await fetch(`/api/mock-external-api/slots`);
     setStatus(res.status);
 
     if (res.ok) {

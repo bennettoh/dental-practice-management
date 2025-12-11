@@ -1,9 +1,8 @@
 "use client";
 
 import { useState } from "react";
-import { Button } from "./ui/button";
-import { BASE_URL } from "@/lib/config";
 import { Badge } from "./ui/badge";
+import { Button } from "./ui/button";
 
 const TEST_DATA = [
   {
@@ -89,7 +88,7 @@ export const CleanApiDemo = () => {
 
   const handleClick = async () => {
     setIsLoading(true);
-    const res = await fetch(`${BASE_URL}/api/available-slots`, {
+    const res = await fetch(`/api/available-slots`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -117,9 +116,7 @@ export const CleanApiDemo = () => {
     <div className="grid md:grid-cols-2 gap-6">
       <div className="bg-white rounded-xl border border-gray-200 shadow-sm overflow-hidden p-6 flex flex-col justify-between h-124 space-y-4">
         <div>
-          <h3 className="font-medium text-gray-900 mb-2">
-            Choose an input
-          </h3>
+          <h3 className="font-medium text-gray-900 mb-2">Choose an input</h3>
           <p className="text-sm text-gray-500">
             Try different inputs to see how mixed casing (PascalCase vs
             snake_case), proprietary IDs ("DDS1"), and varying date formats are
@@ -171,7 +168,11 @@ export const CleanApiDemo = () => {
         </div>
 
         <div className="bg-gray-50 rounded-lg border border-gray-100 p-4 font-mono text-xs text-gray-600 overflow-auto flex-grow">
-          <pre>{ response === null ? "Click 'Hit the endpoint' to simulate the API call" : JSON.stringify(response, null, 2)}</pre>
+          <pre>
+            {response === null
+              ? "Click 'Hit the endpoint' to simulate the API call"
+              : JSON.stringify(response, null, 2)}
+          </pre>
         </div>
       </div>
     </div>
