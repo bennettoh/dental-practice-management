@@ -26,6 +26,7 @@ export const LegacyApiSection = () => {
 
         {/* Code Preview Area */}
         <CodePreview
+          url="https://github.com/bennettoh/dental-practice-management/blob/main/app/api/mock-external-api/slots/route.ts"
           title="GET /mock-external-api/slots"
           content={`export const GET = async () => {
   const dirtyData = [

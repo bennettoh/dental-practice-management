@@ -39,6 +39,7 @@ export const AdapterLogicSection = () => {
             </div>
             <div className="col-span-2">
               <CodePreview
+                url="https://github.com/bennettoh/dental-practice-management/blob/main/lib/normalize-keys.ts"
                 title="lib/normalize-keys.ts"
                 content={`export function normalizeKeys(obj: Slot) {
     const out: Slot = {};
@@ -78,6 +79,7 @@ export const AdapterLogicSection = () => {
             </div>
             <div className="col-span-2">
               <CodePreview
+                url="https://github.com/bennettoh/dental-practice-management/blob/main/lib/transform-slots.ts"
                 title="lib/transform-slots.ts"
                 content={`const normalizeSlot = (raw: Slot) => {
     const slot = normalizeKeys(raw);
@@ -115,6 +117,7 @@ export const AdapterLogicSection = () => {
             </div>
             <div className="col-span-2">
               <CodePreview
+                url="https://github.com/bennettoh/dental-practice-management/blob/main/lib/transform-slots.ts"
                 title="lib/transform-slots.ts"
                 content={`const extractEndTime = (slot: Slot) => {
     const start = extractStartTime(slot);
